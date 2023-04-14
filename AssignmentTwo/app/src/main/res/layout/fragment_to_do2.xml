@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ToDo">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="175dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="175dp"
+            android:text="To Do List"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="175dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="175dp"
+            android:text="What do you want to complete?"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/RatingRadioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <RadioGroup
+            android:id="@+id/RatingRadioGroup"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/todoOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Complete Mobile Application Development Assigment" />
+
+            <RadioButton
+                android:id="@+id/todoTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Study for Scientific Research Methods midterm" />
+
+            <RadioButton
+                android:id="@+id/todoThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Complete Theory of Computation homework" />
+
+            <RadioButton
+                android:id="@+id/todoFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Complete Operating System Lab" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submitBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="100dp"
+            android:text="Submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cancelBT"
+            app:layout_constraintTop_toBottomOf="@+id/RatingRadioGroup"
+            app:layout_constraintVertical_bias="0.502" />
+
+        <Button
+            android:id="@+id/cancelBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="50dp"
+            android:text="Cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/submitBT"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RatingRadioGroup" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
